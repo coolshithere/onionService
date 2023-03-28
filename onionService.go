@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strconv"
 	"time"
-	"control"
-	"process"
+	"github.com/coolshithere/control"
+	"github.com/coolshithere/process"
 	
 )
 
