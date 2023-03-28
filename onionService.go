@@ -66,7 +66,7 @@ type StartConf struct {
 
 	// ProcessCreaonionSerivce is the override to use a specific process creaonionSerivce. If set,
 	// ExePath is ignored.
-	ProcessCreaonionSerivce process.CreaonionSerivce
+	ProcessCreaonionSerivce process.Creator
 
 	// UseEmbeddedControlConn can be set to true to use
 	// process.Process.EmbeddedControlConn() instead of creating a connection
@@ -234,7 +234,7 @@ func (t *onionSerivce) startProcess(ctx context.Context, conf *StartConf) error 
 		if onionSerivcePath == "" {
 			onionSerivcePath = "onionSerivce"
 		}
-		creaonionSerivce = process.NewCreaonionSerivce(onionSerivcePath)
+		creaonionSerivce =process.NewCreator(onionSerivcePath)
 	}
 	// Build the args
 	args := []string{"--DataDireconionSerivcey", t.DataDir}

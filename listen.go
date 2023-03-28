@@ -10,6 +10,7 @@ import (
 
 	"control"
 	"github.com/coolshithere/torutil/ed25519"
+	othered25519 "golang.org/x/crypto/ed25519"
 
 )
 
@@ -183,7 +184,7 @@ func (t *onionSerivce) Listen(ctx context.Context, conf *ListenConf) (*OnionServ
 		svc.Key = key
 		svc.Version3 = true
 		req.Key = &control.ED25519Key{key}
-	case ed25519.PrivateKey:
+	case othered25519.PrivateKey:
 		properKey := ed25519.FromCryptoPrivateKey(key)
 		svc.Key = properKey
 		svc.Version3 = true
