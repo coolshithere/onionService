@@ -9,7 +9,7 @@ import (
 	"strconv"
 
 	"control"
-	"giithub.com/coolshithere/torutil/ed25519"
+	"github.com/coolshithere/torutil/ed25519"
 
 )
 
