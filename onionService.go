@@ -12,6 +12,7 @@ import (
 	"time"
 	"control"
 	"process"
+	
 )
 
 // Tor is the wrapper around the Tor process and control port connection. It

@@ -1,4 +1,4 @@
-package onionSerivce
+package onionService
 
 import (
 	"context"
