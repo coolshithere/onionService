@@ -9,7 +9,7 @@ import (
 	"strconv"
 
 	"control"
-	"onionSerivceutil/ed25519"
+	"giithub.com/coolshithere/torutil/ed25519"
 
 )
 
