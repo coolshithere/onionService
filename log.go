@@ -1,5 +1,4 @@
-package tor
-
+package onionSerivce
 import "fmt"
 
 // DebugEnabled returns true if there is a DebugWriter.

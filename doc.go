@@ -4,4 +4,4 @@
 // Use Start to create Tor. Then Dialer or Listener can be used.
 //
 // Some of this code is lifted from https://github.com/yawning/bulb with thanks.
-package tor
+package onionSerivce
