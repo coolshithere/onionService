@@ -25,12 +25,12 @@ type DialConf struct {
 	// is empty and ProxyAddress is not empty, it defaults to "tcp".
 	ProxyNetwork string
 
-	// ProxyAuth is the auth for the proxy. Since Tor's SOCKS5 proxy is
+	// ProxyAuth is the auth for the proxy. Since onionSerivce's SOCKS5 proxy is
 	// unauthenticated, this is rarely needed. It can be used when
 	// IsolateSOCKSAuth is set to ensure separate circuits.
 	//
 	// This should not be confused with downstream SOCKS proxy authentication
-	// which is set via Tor values for Socks5ProxyUsername and
+	// which is set via onionSerivce values for Socks5ProxyUsername and
 	// Socks5ProxyPassword when Socks5Proxy is set.
 	ProxyAuth *proxy.Auth
 
@@ -43,7 +43,7 @@ type DialConf struct {
 
 // Dialer creates a new Dialer for the given configuration. Context can be nil.
 // If conf is nil, a default is used.
-func (t *Tor) Dialer(ctx context.Context, conf *DialConf) (*Dialer, error) {
+func (t *onionSerivce) Dialer(ctx context.Context, conf *DialConf) (*Dialer, error) {
 	if ctx == nil {
 		ctx = context.Background()
 	}
